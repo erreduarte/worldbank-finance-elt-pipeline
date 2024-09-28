@@ -6,10 +6,10 @@ This repository showcases an end-to-end ELT (Extract, Load, Transform) pipeline 
 
 The primary goal of this project is to illustrate how to design and orchestrate scalable ELT pipelines entirely in the cloud, ensuring no files are stored locally. The solution employs the following tools and technologies:
 
-Apache Airflow: For orchestrating and automating the ELT pipeline tasks.
-Pandas: For data manipulation and transformation, including cleaning and processing the data.
-Azure Blob Storage: Used for staging data extracted from the World Bank API before transformation.
-Azure SQL Database: For storing the cleaned and transformed datasets, allowing for efficient querying and analysis.
+- **Apache Airflow:** For orchestrating and automating the ELT pipeline tasks.<br>
+- **Pandas:** For data manipulation and transformation, including cleaning and processing the data.<br>
+- **Azure Blob Storage:** Used for staging data extracted from the World Bank API before transformation.<br>
+- **Azure SQL Database:** For storing the cleaned and transformed datasets, allowing for efficient querying and analysis.<br>
 
 This project serves as a practical example of leveraging modern data engineering practices and tools to automate workflows and ensure efficient data handling in a cloud environment.
 
