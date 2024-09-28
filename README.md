@@ -117,8 +117,7 @@ ORDER BY debt_remaining DESC;
   ```
 
 
-  
-#### You can copy this directly into your GitHub repository `README.md` or wherever you need to place the raw text.
+
 
 
 
