@@ -112,7 +112,7 @@ def ELT_WB():
          
     @task
     def create_MS_SQL_table():
-        #Create connection credentials to Blob Storage
+        #Azure Database Credentials
         hook = MsSqlHook(mssql_conn_id = "microsoft_azure_database")
         #Drop table if exists (necessary due to FreeTier limitations)
         drop_table_sql = """
@@ -151,7 +151,7 @@ def ELT_WB():
     def populate_dbo_WB_Loans():
         #Azure Database Credentials
         hook = MsSqlHook(mssql_conn_id = "microsoft_azure_database")
-        #SQL Bulk load file into new table. A MASTER KEY, DATABASE SCOPED CREDENTIALS and EXTERNAL DATA SOURCE in Azure Portal. 
+        #SQL Bulk load file into new table. A MASTER KEY, DATABASE SCOPED CREDENTIALS and EXTERNAL DATA SOURCE was previously created in Azure Portal. 
         populate_sql =  """
                 BULK INSERT dbo.WB_Loans
                 FROM 'WB_Data_Loans__Silver.csv'
