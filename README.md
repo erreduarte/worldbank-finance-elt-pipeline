@@ -2,9 +2,16 @@
 
 ## Overview
 
-This repository showcases an end-to-end **ELT pipeline** designed to extract financial data from the **World Bank API**, transform it using **Pandas**, and load it into an **Azure SQL Database**. The project demonstrates expertise in cloud-native data engineering, focusing on data extraction, transformation, loading, and automation using **Apache Airflow**.
+This repository showcases an end-to-end ELT (Extract, Load, Transform) pipeline designed to extract financial data from the World Bank API, transform it using Pandas, and load it into an Azure SQL Database. The project highlights expertise in cloud-native data engineering, specifically focusing on data extraction, transformation, loading, and automation using Apache Airflow.
 
-The primary goal of this project is to illustrate how to design and orchestrate scalable ELT pipelines entirely in the cloud, ensuring no files are stored locally. The solution leverages **Azure Blob Storage** for staging data and **Azure SQL Database** for storing cleaned and transformed datasets.
+The primary goal of this project is to illustrate how to design and orchestrate scalable ELT pipelines entirely in the cloud, ensuring no files are stored locally. The solution employs the following tools and technologies:
+
+Apache Airflow: For orchestrating and automating the ELT pipeline tasks.
+Pandas: For data manipulation and transformation, including cleaning and processing the data.
+Azure Blob Storage: Used for staging data extracted from the World Bank API before transformation.
+Azure SQL Database: For storing the cleaned and transformed datasets, allowing for efficient querying and analysis.
+
+This project serves as a practical example of leveraging modern data engineering practices and tools to automate workflows and ensure efficient data handling in a cloud environment.
 
 ## About the Data
 
