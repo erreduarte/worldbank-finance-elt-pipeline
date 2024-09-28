@@ -1,0 +1,40 @@
+erreduarte
+*** Found local files:
+***   * /home/erreduarte/airflow/logs/dag_id=ELT_WB/run_id=manual__2024-09-27T18:10:33.034692+00:00/task_id=create_MS_SQL_table/attempt=3.log
+[2024-09-27T19:13:15.034+0100] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-27T19:13:15.091+0100] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ELT_WB.create_MS_SQL_table manual__2024-09-27T18:10:33.034692+00:00 [queued]>
+[2024-09-27T19:13:15.111+0100] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ELT_WB.create_MS_SQL_table manual__2024-09-27T18:10:33.034692+00:00 [queued]>
+[2024-09-27T19:13:15.111+0100] {taskinstance.py:2865} INFO - Starting attempt 3 of 3
+[2024-09-27T19:13:15.143+0100] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): create_MS_SQL_table> on 2024-09-27 18:10:33.034692+00:00
+[2024-09-27T19:13:15.150+0100] {standard_task_runner.py:72} INFO - Started process 1199477 to run task
+[2024-09-27T19:13:15.152+0100] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'ELT_WB', 'create_MS_SQL_table', 'manual__2024-09-27T18:10:33.034692+00:00', '--job-id', '297', '--raw', '--subdir', 'DAGS_FOLDER/DAG_ELT_WB.py', '--cfg-path', '/tmp/tmpo_n5syr6']
+[2024-09-27T19:13:15.153+0100] {standard_task_runner.py:105} INFO - Job 297: Subtask create_MS_SQL_table
+[2024-09-27T19:13:15.326+0100] {task_command.py:467} INFO - Running <TaskInstance: ELT_WB.create_MS_SQL_table manual__2024-09-27T18:10:33.034692+00:00 [running]> on host erreduarte
+[2024-09-27T19:13:15.560+0100] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='renanduarte' AIRFLOW_CTX_DAG_ID='ELT_WB' AIRFLOW_CTX_TASK_ID='create_MS_SQL_table' AIRFLOW_CTX_EXECUTION_DATE='2024-09-27T18:10:33.034692+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-27T18:10:33.034692+00:00'
+[2024-09-27T19:13:15.560+0100] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-27T19:13:15.605+0100] {base.py:84} INFO - Retrieving connection 'microsoft_azure_database'
+[2024-09-27T19:13:16.162+0100] {sql.py:531} INFO - Running statement: 
+            DROP TABLE IF EXISTS dbo.WB_Loans; , parameters: None
+[2024-09-27T19:13:16.303+0100] {logging_mixin.py:190} INFO - Table dbo.WB_Loans sucessfully dropped or didn't exist
+[2024-09-27T19:13:16.754+0100] {sql.py:531} INFO - Running statement: 
+            
+                CREATE TABLE dbo.WB_Loans (
+                loan_number              VARCHAR(10),
+                region                   VARCHAR(30),
+                country                  VARCHAR(30),
+                loan_status              VARCHAR(15),
+                original_principal_amount FLOAT,
+                repaid_to_ibrd           FLOAT,
+                repaid_3rd_party         FLOAT,
+                undisbursed_amount       FLOAT,
+                total_repaid             FLOAT,
+                debt_remaining           FLOAT
+                )
+        , parameters: None
+[2024-09-27T19:13:16.890+0100] {logging_mixin.py:190} INFO - Table sucessfully created
+[2024-09-27T19:13:16.891+0100] {python.py:240} INFO - Done. Returned value was: Table dbo.WB_Loans sucessfully created
+[2024-09-27T19:13:16.998+0100] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-27T19:13:16.998+0100] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=ELT_WB, task_id=create_MS_SQL_table, run_id=manual__2024-09-27T18:10:33.034692+00:00, execution_date=20240927T181033, start_date=20240927T181315, end_date=20240927T181316
+[2024-09-27T19:13:17.050+0100] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-27T19:13:17.125+0100] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-27T19:13:17.128+0100] {local_task_job_runner.py:245} INFO - ::endgroup::

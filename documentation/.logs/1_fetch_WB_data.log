@@ -1,0 +1,21 @@
+erreduarte
+*** Found local files:
+***   * /home/erreduarte/airflow/logs/dag_id=ELT_WB/run_id=manual__2024-09-27T18:10:33.034692+00:00/task_id=fetch_WB_data/attempt=1.log
+[2024-09-27T19:10:35.064+0100] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-27T19:10:35.122+0100] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ELT_WB.fetch_WB_data manual__2024-09-27T18:10:33.034692+00:00 [queued]>
+[2024-09-27T19:10:35.141+0100] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ELT_WB.fetch_WB_data manual__2024-09-27T18:10:33.034692+00:00 [queued]>
+[2024-09-27T19:10:35.142+0100] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-09-27T19:10:35.165+0100] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): fetch_WB_data> on 2024-09-27 18:10:33.034692+00:00
+[2024-09-27T19:10:35.171+0100] {standard_task_runner.py:72} INFO - Started process 1199034 to run task
+[2024-09-27T19:10:35.173+0100] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'ELT_WB', 'fetch_WB_data', 'manual__2024-09-27T18:10:33.034692+00:00', '--job-id', '289', '--raw', '--subdir', 'DAGS_FOLDER/DAG_ELT_WB.py', '--cfg-path', '/tmp/tmpc977nfxe']
+[2024-09-27T19:10:35.174+0100] {standard_task_runner.py:105} INFO - Job 289: Subtask fetch_WB_data
+[2024-09-27T19:10:35.353+0100] {task_command.py:467} INFO - Running <TaskInstance: ELT_WB.fetch_WB_data manual__2024-09-27T18:10:33.034692+00:00 [running]> on host erreduarte
+[2024-09-27T19:10:35.614+0100] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='renanduarte' AIRFLOW_CTX_DAG_ID='ELT_WB' AIRFLOW_CTX_TASK_ID='fetch_WB_data' AIRFLOW_CTX_EXECUTION_DATE='2024-09-27T18:10:33.034692+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-27T18:10:33.034692+00:00'
+[2024-09-27T19:10:35.616+0100] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-27T19:10:40.489+0100] {base.py:84} INFO - Retrieving connection 'azure_blob_storage'
+[2024-09-27T19:10:41.659+0100] {python.py:240} INFO - Done. Returned value was: ('message:Data successfully transformed. Saved in blob storage as rfd-container/WB_Data_Loans__Bronze.csv',)
+[2024-09-27T19:10:41.765+0100] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-27T19:10:41.766+0100] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=ELT_WB, task_id=fetch_WB_data, run_id=manual__2024-09-27T18:10:33.034692+00:00, execution_date=20240927T181033, start_date=20240927T181035, end_date=20240927T181041
+[2024-09-27T19:10:41.841+0100] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-27T19:10:41.926+0100] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-27T19:10:41.934+0100] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,22 @@
+erreduarte
+*** Found local files:
+***   * /home/erreduarte/airflow/logs/dag_id=ELT_WB/run_id=manual__2024-09-27T18:10:33.034692+00:00/task_id=analysis_loans/attempt=2.log
+[2024-09-27T19:13:22.280+0100] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-27T19:13:22.333+0100] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ELT_WB.analysis_loans manual__2024-09-27T18:10:33.034692+00:00 [queued]>
+[2024-09-27T19:13:22.353+0100] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ELT_WB.analysis_loans manual__2024-09-27T18:10:33.034692+00:00 [queued]>
+[2024-09-27T19:13:22.353+0100] {taskinstance.py:2865} INFO - Starting attempt 2 of 2
+[2024-09-27T19:13:22.380+0100] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): analysis_loans> on 2024-09-27 18:10:33.034692+00:00
+[2024-09-27T19:13:22.385+0100] {standard_task_runner.py:72} INFO - Started process 1199529 to run task
+[2024-09-27T19:13:22.388+0100] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'ELT_WB', 'analysis_loans', 'manual__2024-09-27T18:10:33.034692+00:00', '--job-id', '300', '--raw', '--subdir', 'DAGS_FOLDER/DAG_ELT_WB.py', '--cfg-path', '/tmp/tmp9m9yj7mk']
+[2024-09-27T19:13:22.390+0100] {standard_task_runner.py:105} INFO - Job 300: Subtask analysis_loans
+[2024-09-27T19:13:22.556+0100] {task_command.py:467} INFO - Running <TaskInstance: ELT_WB.analysis_loans manual__2024-09-27T18:10:33.034692+00:00 [running]> on host erreduarte
+[2024-09-27T19:13:22.816+0100] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='renanduarte' AIRFLOW_CTX_DAG_ID='ELT_WB' AIRFLOW_CTX_TASK_ID='analysis_loans' AIRFLOW_CTX_EXECUTION_DATE='2024-09-27T18:10:33.034692+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-27T18:10:33.034692+00:00'
+[2024-09-27T19:13:22.817+0100] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-27T19:13:22.872+0100] {base.py:84} INFO - Retrieving connection 'microsoft_azure_database'
+[2024-09-27T19:13:23.329+0100] {logging_mixin.py:190} WARNING - /home/erreduarte/airflow/.venv/lib/python3.10/site-packages/airflow/providers/common/sql/hooks/sql.py:303 UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2024-09-27T19:13:23.433+0100] {python.py:240} INFO - Done. Returned value was: {'country': {0: 'INDIA', 1: 'PAKISTAN', 2: 'JAPAN', 3: 'PERU', 4: 'BRAZIL', 5: 'MEXICO', 6: 'TURKEY', 7: 'TURKIYE', 8: 'CONGO DEMOCRATIC REPUBLIC OF', 9: 'PHILIPPINES'}, 'count_of_loans': {0: 16, 1: 9, 2: 8, 3: 6, 4: 4, 5: 4, 6: 4, 7: 4, 8: 3, 9: 3}}
+[2024-09-27T19:13:23.545+0100] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-27T19:13:23.545+0100] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=ELT_WB, task_id=analysis_loans, run_id=manual__2024-09-27T18:10:33.034692+00:00, execution_date=20240927T181033, start_date=20240927T181322, end_date=20240927T181323
+[2024-09-27T19:13:23.604+0100] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-27T19:13:23.666+0100] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-27T19:13:23.670+0100] {local_task_job_runner.py:245} INFO - ::endgroup::
