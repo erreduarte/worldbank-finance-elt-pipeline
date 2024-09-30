@@ -47,5 +47,6 @@ This section provides an overview of the outcome data processed during the proje
    
 2. ![WB_Data_Loans_Silver](.data_view/WB_Data_Loans__Silver.csv): This file includes the transformed data, where unnecessary characters were removed and additional aggregated columns were introduced.
    
-3. ![Database_View]: A sample result of the final database query, illustrating how the transformed data was loaded into the database and can be queried.
+3. A sample result of the final database query, illustrating how the transformed data was loaded into the database and can be queried.
+   ![Database_View](.data_view/database_overview.png)
 
