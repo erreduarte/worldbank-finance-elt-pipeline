@@ -97,7 +97,8 @@ columns_to_clean = ['loan_number', 'region', 'country', 'loan_status']
 
   ### Code Highlights
 
-  ** The Airflow DAG orchestrates the following tasks:
+  **The Airflow DAG orchestrates the following tasks:**
+  
 - **Data Extraction:** Fetches the World Bank data from the API and stores it in Azure Blob Storage as a CSV file.
 - **Data Transformation:** Cleans and transforms the raw data, preparing it for analysis.
 - **Data Loading:** Loads the transformed data into Azure SQL Database.
