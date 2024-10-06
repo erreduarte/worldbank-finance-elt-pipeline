@@ -1,4 +1,4 @@
-## Proof of Successful Pipeline Execution
+## Pipeline Execution Overview
 
 ### Airflow DAG and Task Success
 Below are screenshot details of the Airflow UI showing a successful DAG run for this pipeline:
